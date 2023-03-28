@@ -1,7 +1,20 @@
+---
+title: "DS202 Homework 7"
+author: "Scott Madland, On Wave Tiong"
+date: "2023-03-27"
+output: html_document
+---
+
+Team members:On Wave Tiong, Scott Madland. 
+
+Link to github repo: https://github.com/Towave28/Homework-7. 
+
+
+
 ```{r}
 library(tidyverse)
 HAPPY <- readRDS("data/HAPPY.rds")
-HAPPY
+head(HAPPY)
 ```
 
 Data cleaning: the values “IAP”, “DK” and “NA” all encode missing values. Replace all of these instances by the value NA.
@@ -117,7 +130,7 @@ The most people that answered this survey has a moderate political view.
 
 
 Question from On Wave Tiong:  
-How it the health of male or female in the US.  
+How is the health situation of male or female in the US.  
 ```{r}
 library(ggmosaic)
 ggplot(data = HAPPY)  + 
