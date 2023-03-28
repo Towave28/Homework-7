@@ -141,3 +141,14 @@ ggplot(data = HAPPY)  +
 We can obviously see that people are not too happy when their health is poor and it seems like male and female have the same opinion. While in excellent health, male seems to be more happier than female. However, while in fair health, female seems to be more happier compare to male.
 
 Question for Scott Madland:  
+What is the distribution across ages and what can we take away? 
+```{r}
+library(ggmosaic)
+ggplot(data = HAPPY , aes(x = AGE)) + 
+  geom_histogram(binwidth=10) + 
+  facet_grid(~SEX)
+
+```
+
+We can conclude that the distribution of ages is right skewed. Late 20s makes up the most populated age group. And unsurprisingly the least populated age group is the oldest. There are also more females as opposed to males. The distribution among genders ia relatively similar. 
+
